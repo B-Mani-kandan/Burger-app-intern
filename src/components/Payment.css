@@ -1,0 +1,62 @@
+.paymentorder {
+  text-align: center;
+  padding: 2%;
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.paymentback {
+  width: 10%;
+  margin-top: 3%;
+  padding: 1%;
+  position: relative;
+  left: 45%;
+  border-radius: 5%;
+  align-items: center;
+  display: flex;
+  background-color: #cc0000;
+  color: #f1f1f1;
+  border: 1px solid #cc0000;
+  text-decoration: none;
+  font-family: ui-sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.paymentback:hover {
+  color: #f1f1f1;
+}
+.paymentbtn {
+  width: auto;
+  position: relative;
+  left: 45%;
+  margin-top: 2%;
+  border-radius: 5%;
+  color: #f1f1f1;
+  text-decoration: none;
+  text-align: center;
+  background-color: #cc0000;
+  padding: 1%;
+  border: 1px solid #cc0000;
+  font-family: ui-sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+@media (max-width: 767px) {
+  .paymentbtn {
+    left: 35%;
+  }
+  .paymentback {
+    width: 30%;
+    left: 37%;
+    position: relative;
+  }
+}
+@media (max-width: 873px) {
+  .paymentback {
+    width: 15%;
+  }
+}
+@media (max-width: 667px) {
+  .paymentback {
+    width: 20%;
+  }
+}

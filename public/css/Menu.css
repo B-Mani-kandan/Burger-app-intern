@@ -1,0 +1,216 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+header {
+  background: url(../img/banner-bg.png) center no-repeat;
+  background-size: cover;
+}
+
+header * {
+  color: #3d2514;
+}
+
+header.py {
+  padding-top: 2rem;
+}
+
+header #nav .desktop {
+  text-align: right;
+}
+
+header #nav .desktop span {
+  margin-left: calc(var(--spacer) * 2);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
+header #nav .nav-item {
+  margin-top: calc(var(--spacer) * 0.75);
+}
+
+header #nav .nav-item + .nav-item {
+  margin-left: calc(var(--spacer) * 2);
+}
+
+header #nav .nav-item:last-child .nav-link {
+  padding-right: 0;
+}
+
+header #nav .nav-link {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  font-family: "Bebas Neue", cursive;
+  letter-spacing: 2px;
+}
+
+header #nav .nav-link:hover {
+  color: unset;
+}
+
+header .nav-link span {
+  background: red;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  position: absolute;
+  top: 36px;
+  left: 99%;
+  padding: 1px 10px;
+}
+.top-div h1 {
+  margin-top: 45px;
+  margin-bottom: 5%;
+  font-size: calc(var(--spacer) * 1.5);
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bolder;
+  text-shadow: calc(var(--spacer) * 0.05) calc(var(--spacer) * 0.05) 0 white;
+}
+.top-div p {
+  margin-top: 1.5%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 2%;
+}
+
+#menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-01 {
+  background-color: #fff;
+  position: relative;
+  flex: 1;
+  max-width: 530px;
+  height: 150px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.card-01 p {
+  margin: 10px 0px 10px;
+  width: 65%;
+  text-align: justify;
+}
+.card-01 strong {
+  margin-top: 10%;
+}
+.card-01 .image {
+  max-width: -webkit-fill-available;
+  object-fit: cover;
+  margin-top: 15px;
+  position: absolute;
+  width: 30%;
+  margin-left: 2.5%;
+  height: 80%;
+}
+.card-01 span {
+  margin-top: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+#customize-burg {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 20%;
+  width: 150px;
+  height: 110px;
+  margin-left: 30%;
+}
+#customize {
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 20%;
+  width: 150px;
+  height: 120px;
+  margin-left: 25%;
+}
+#customize-burger {
+  margin-left: 35%;
+  width: 150px;
+  height: 110px;
+}
+#customize-burgers {
+  margin-left: 40%;
+  width: 150px;
+  height: 110px;
+}
+#coffe {
+  margin-left: 42%;
+  width: 150px;
+  height: 110px;
+}
+#oreo {
+  margin-left: 49%;
+  width: 150px;
+  height: 110px;
+}
+#Fountaindrink {
+  margin-left: 22%;
+  width: 120px;
+  height: 110px;
+}
+#kids {
+  margin-left: 20%;
+  width: 110px;
+  height: 100px;
+}
+@media (max-width: 767px) {
+  header .nav-link span {
+    position: absolute;
+    top: 77%;
+    left: 5%;
+  }
+  .card-01 {
+    flex: auto;
+    height: -1%;
+    position: relative;
+    left: 4%;
+    font-size: smaller;
+  }
+  .card-01 .image {
+    right: 2%;
+    object-fit: contain;
+  }
+  .btn-popup {
+    min-width: max-content;
+    margin-bottom: 2%;
+  }
+
+  #customize {
+    width: 20%;
+    /* height: auto; */
+  }
+  #customize-burger {
+    width: 22%;
+    margin-right: 1%;
+    bottom: 5%;
+    position: absolute;
+  }
+  #customize-burgers {
+    width: 20%;
+    /* height: auto; */
+  }
+  #coffe {
+    width: 16%;
+    /* height: auto; */
+  }
+  #oreo {
+    width: 20%;
+  }
+  #Fountaindrink {
+    width: 16%;
+    margin-right: 2%;
+  }
+  #kids {
+    width: 24%;
+  }
+}

@@ -1,0 +1,504 @@
+$breakPoints : ( 1199px, 991px, 767px, 575px);
+$defaultHeadings : ( 2, 1.5, 1.2, 1, 0.83, 0.67);
+$colors: ( primary: #3d2514, secondary: white, bg-red: #bf2222, accent: #ffc045);
+
+
+@mixin getColor($g ,$name) {
+  @if $g == b {
+    background-color: map-get($colors, $name);
+  }
+  @else if $g == c {
+    color: map-get($colors, $name);
+  }
+}
+
+@function getSpace($m) {
+  @return calc( var(--spacer) * #{$m} );
+}
+
+
+html {
+  --spacer: 1.25rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+.py {
+  padding: 5rem 0 5rem 0;
+}
+
+// header section css
+
+    // font-family: 'Montserrat', sans-serif;
+    // font-family: 'Bebas Neue', cursive;
+    // font-family: 'Alfa Slab One', cursive;
+
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+header {
+  background: url(../img/banner-bg.png) center no-repeat;
+  background-size: cover;
+  * {
+    @include getColor(c, primary);
+  }
+
+  &.py {
+    padding-top: 2rem;
+  }
+
+  #nav {
+    .desktop {
+      text-align: right;
+      span {
+        margin-left: getSpace(2);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 600;
+      }
+    }
+
+    .nav-item {
+      margin-top: getSpace(0.75);
+    }
+
+    .nav-item + .nav-item {
+      margin-left: getSpace(2);
+    }
+    .nav-item:last-child .nav-link {
+      padding-right: 0;
+    }
+
+    .nav-link {
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 2px;
+    }
+
+    .nav-link:hover {
+      color: unset;
+    }
+  }
+
+  .content {
+    margin-top: getSpace(2);
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+
+    h4 {
+      font-size: getSpace(1.2);
+      letter-spacing: 2px;
+      border: 2px dashed currentColor;
+      width: fit-content;
+      padding: getSpace(0.15) getSpace(0.25);
+    }
+    h1 {
+      font-size: getSpace(5.5);
+      font-family: 'Alfa Slab One', cursive;
+      text-shadow: getSpace(0.25) getSpace(0.25) 0 white;
+    }
+    h2 {
+      font-family: 'Alfa Slab One', cursive;
+      font-size: getSpace(3);
+      text-shadow: getSpace(0.15) getSpace(0.15) 0 white;
+    }
+  }
+}
+
+// dish section starts here
+
+.popular {
+  .dish {
+    position: relative;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 getSpace(1.5) rgba(0, 0, 0, 0.3);
+    }
+
+    .details {
+      position: absolute;
+      top: getSpace(1);
+      left: getSpace(1);
+      font-family: 'Bebas Neue', cursive;
+      letter-spacing: 1px;
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+
+    }
+  }
+  button {
+    font-size: 1.5rem;
+    font-family: 'Bebas Neue', cursive;
+    padding: 0.5rem 1.25rem;
+    margin-top: getSpace(2) !important;
+    width: fit-content;
+    margin: 0 auto;
+    border: none;
+    outline: none;
+    background-color: map-get($colors, accent);
+    transition: 0.3s;
+    &:hover {
+      background-color: darken(map-get($colors, accent) , 10);
+    }
+  }
+}
+
+// Order now section starts here
+
+.order {
+  text-align: center;
+  color: map-get($colors, primary);
+  padding-top: 0;
+  
+  h1 {
+    font-family: 'Alfa Slab One';
+    font-size: getSpace(2.5);
+    text-transform: uppercase;
+  }
+  p {
+    font-family: 'Montserrat', cursive;
+    font-size: 1.125rem;
+  }
+
+  & > p {
+    width: 75%;
+    margin: getSpace(1) auto getSpace(3) auto;
+  }
+
+  button {
+    background-color: red;
+    color: white;
+    border-radius: 0;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 1.125rem;
+
+    &:hover {
+      color: white;
+      background-color: darken(#ff0000, 10%);
+    }
+  }
+
+  .col-md-4 {
+    img {
+      transition: 0.3s ease-in-out;
+    }
+    h2 {
+      font-family: 'Bebas Neue', cursive;
+      margin-top: getSpace(1);
+    font-size: 2.25rem;
+    }
+  }
+  p {
+    font-family: 'Montserrat';
+    font-size: 1.125rem;
+    width: 90%;
+  }
+
+  .col-md-4:hover img {
+    transform: scale(1.2);
+  }
+}
+
+
+// slider section
+
+.slider {
+  margin-bottom: getSpace(3);
+  color: map-get($colors, primary);
+  box-shadow: getSpace(1) getSpace(1) getSpace(2.5) rgba($color: #000000, $alpha: 0.2);
+
+  h3 {
+    font-family: 'Alfa Slab One';
+    font-size: getSpace(1.5);
+    text-transform: uppercase;
+  }
+  p {
+    font-family: 'Montserrat', cursive;
+    font-size: 1.125rem;
+  }
+  .owl-nav {
+    display: none;
+  }
+  .owl-dots {
+    text-align: left !important;
+    .owl-dot span {
+      height: getSpace(1);
+      width: getSpace(1);
+    }
+    .owl-dot.active span {
+      background-color: map-get($colors, accent) !important;
+    }
+  }
+}
+
+
+.reservation {
+  background: url(../img/form-bg.png) center no-repeat;
+  background-size: cover;
+  padding: getSpace(5);
+  h4, h1 {
+    color: map-get($colors, primary);
+  }
+  h1 {
+    font-family: 'Alfa Slab One';
+    font-size: getSpace(2.5);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: getSpace(3);
+  }
+  h4 {
+    font-family: 'Montserrat', cursive;
+    font-size: 2.125rem;
+  }
+  input {
+    display: block;
+    width: 100%;
+    border: 1.5px solid #3d3d3d;
+    border-radius: 5px;
+    margin-bottom: getSpace(1);
+    padding: getSpace(0.75) getSpace(1);
+  }
+  input:focus {
+    outline: none;
+  }
+  input::placeholder {
+    color: #aaa;
+    font-family: 'Montserrat', sans-serif;
+    opacity: 1;
+  }
+  .col-md-4:last-child input:last-child {
+    background: red;
+    border: 1px solid #f00;
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 1.125rem;
+    transition: 0.2s;
+    letter-spacing: 2px;
+
+    &:hover {
+      color: white;
+      background-color: darken(#ff0000, 10%);
+    }
+  }
+}
+
+footer {
+  .container {
+    background: url(../img/footer-bg.png);
+    color: white;
+
+    .row {
+      padding-top: getSpace(3);
+      padding-bottom: getSpace(3);
+      align-items: center;
+      .col-md-6:first-child {
+        padding-left: getSpace(2);
+      }
+      p {
+        font-family: 'Montserrat', cursive;
+        font-size: 1.125rem;
+        margin-top: getSpace(1.5);
+      }
+      .col-md-4 {
+        padding-top: getSpace(5);
+      }
+      h4 {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        line-height: getSpace(1.5);
+        font-family: 'Bebas Neue', cursive;
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+        i {
+          text-align: center;
+          padding-right: getSpace(1);
+          width: 40px;
+          height: 30px;
+        }
+      }
+    }
+
+    .d-flex {
+      padding-left: getSpace(1.5);
+      align-items: center;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      ul li {
+        list-style-type: none;
+        display: inline-block;
+        padding: getSpace(.5);
+
+        i {
+          width: 2rem;
+          height: 2rem;
+          border-radius: 50%;
+          text-align: center;
+          line-height: 2rem;
+          color: #3d3d3d;
+          background-color: white;
+          transition: 0.3s;
+          &:hover {
+            background-color: #333;
+            color: map-get($colors, accent);
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199px) {
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+  .desktop {
+    display: none;
+  }
+  header .row {
+    margin-top: getSpace(2);
+    position: relative;
+
+    .content {
+      position: absolute;
+      top: getSpace(-2);
+      left: 0;
+      transform-origin: left;
+    }
+    .col-md-5 {
+      margin-top: getSpace(3);
+    }
+  }
+
+  .dish {
+    margin-top: getSpace(2) !important;
+    .details {
+      top: getSpace(2);
+      left: getSpace(2);
+      h4 {
+        font-size: getSpace(1.5);
+      }
+      h2 {
+        font-size: getSpace(3);
+      }
+    }
+  }
+
+  .order {
+    .col-md-4 {
+      margin-bottom: getSpace(4);
+    }
+  }
+
+  .slider > div {
+    margin: getSpace(2);
+  }
+
+  footer {
+    text-align: center;
+    .d-flex > * {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  header {
+    .navbar-brand {
+      width: 50%;
+      & img {
+        width: 100%;
+      }
+    }
+    .nav-item {
+      margin-left: 0 !important;
+    }
+    .row {
+      .content {
+        & > * {
+          text-align: left;
+          margin-bottom: 0;
+        }
+        h4 {
+          border: none;
+        }
+      }
+      .col-md-5 {
+        margin-top: calc( 140px - 28vw );
+      }
+    }
+  }
+  .popular {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .order {
+    padding: getSpace(2) 0;
+    width: 95%;
+    margin: 0 auto;
+
+    & > p {
+      width: 100% !important;
+    }
+    .row {
+      width: 100%;
+      .col-md-4 {
+        width: 100% !important;
+      }
+    }
+    .col-md-4:hover img {
+      transform: scale(1);
+    }
+  }
+
+  footer {
+    p {
+      font-size: 1rem;
+    }
+    .container .row h4 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@for $i from 1 through length($breakPoints) {
+  @media (max-width: nth($breakPoints, $i)) {
+    html {
+      --spacer: #{1.25-(5/32*$i)}rem;
+    }
+    .py {
+      padding:((5-$i)*1rem) 0;
+    }
+  }
+}
