@@ -46,7 +46,7 @@
   }
   .paymentback {
     width: 30%;
-    left: 37%;
+    left: 35%;
     position: relative;
   }
 }
@@ -57,6 +57,6 @@
 }
 @media (max-width: 667px) {
   .paymentback {
-    width: 30%;
+    width: 33%;
   }
 }
