@@ -82,9 +82,9 @@ function Menu() {
         <div className="container">
           <div className="row" id="menu">
             <div className="card-01">
-              <strong>{Records[1].title}</strong>
+              <strong>{Records[2].title}</strong>
               <img className="image" src="./img/1" alt="" />
-              <p>{Records[1].content}</p>
+              <p>{Records[2].content}</p>
               <span>&#x20B9;500</span>
               <Popup />
             </div>
@@ -93,7 +93,7 @@ function Menu() {
               <img className="image" src="./img/2" alt="" />
               <p>
                 Single(1) Certified Angus beef patty,melted American cheese,
-                lettuce, pickles, ketchup & mustard on a Toasted Brioche Bun.
+                lettuce, pickles, ketchup & mustard.
               </p>
               <span>&#x20B9;190</span>
               <Popup />
@@ -107,7 +107,7 @@ function Menu() {
               <img className="image" src="./img/2" alt="" />
               <p>
                 Double(2) Certified Angus beef patty,melted American cheese,
-                lettuce, pickles, ketchup & mustard on a Toasted Brioche Bun.
+                lettuce, pickles, ketchup & mustard.
               </p>
               <span>&#x20B9;370</span>
               <Popup />
@@ -117,7 +117,7 @@ function Menu() {
               <img className="image" src="./img/2" alt="" />
               <p>
                 Triple(3) Certified Angus beef patty,melted American cheese,
-                lettuce, pickles, ketchup & mustard on a Toasted Brioche Bun.
+                lettuce, pickles, ketchup & mustard.
               </p>
               <span>&#x20B9;520</span>
               <Popup />
@@ -132,10 +132,7 @@ function Menu() {
                 (Customize your Burger!)
               </strong>
               <img className="image" id="customize-burg" src="./img/3" alt="" />
-              <p>
-                Triple (3) Angus beef patties and melted American Cheese on a
-                Toasted Brioche Bun.
-              </p>
+              <p>Triple (3) Angus beef patties and melted American Cheese.</p>
               <span>&#x20B9;520</span>
               <Popup />
             </div>
@@ -145,10 +142,7 @@ function Menu() {
                 (Customize your Burger!)
               </strong>
               <img className="image" id="customize-burg" src="./img/3" alt="" />
-              <p>
-                Double (2) Angus beef patties and melted American Cheese on a
-                Toasted Brioche Bun.
-              </p>
+              <p>Double (2) Angus beef patties and melted American Cheese.</p>
               <span>&#x20B9;370</span>
               <Popup />
             </div>
@@ -162,10 +156,7 @@ function Menu() {
                 (Customize your Burger!)
               </strong>
               <img className="image" id="customize-burg" src="./img/3" alt="" />
-              <p>
-                Single (1) Angus beef patty and melted American Cheese on a
-                Toasted Brioche Bun.
-              </p>
+              <p>Single (1) Angus beef patty and melted American Cheese.</p>
               <span>&#x20B9;190</span>
               <Popup />
             </div>
@@ -174,7 +165,7 @@ function Menu() {
               <img className="image" id="customize-burg" src="./img/4" alt="" />
               <p>
                 A Delicious Fried Crispy Chicken Breast with lettuce, tomato,
-                and your choice of dressing. Choose your dressing!
+                and your choice of dressing.
               </p>
               <span>&#x20B9;260</span>
               <Popup />
@@ -189,17 +180,17 @@ function Menu() {
         <div className="row" id="menu">
           <div className="card-01">
             <strong>French Fries (Regular Size)</strong>
-            <img className="image" id="customize" src="./img/5" alt="" />
+            <img className="image" id="customize-burg" src="./img/5" alt="" />
             <p>
               Golden and crispy on the outside, fluffy and tender on the inside,
-              our French fries are the perfect sidekick to any meal
+              our French fries are the perfect sidekick.
             </p>
             <span>&#x20B9;238</span>
             <Popup />
           </div>
           <div className="card-01">
             <strong>Half Fries - Half Onion Rings</strong>
-            <img className="image" id="customize" src="./img/6" alt="" />
+            <img className="image" id="customize-burg" src="./img/6" alt="" />
             <p>1/2 an order of fries AND 1/2 an order of Onion Rings</p>
             <span>&#x20B9;280</span>
             <Popup />
@@ -212,8 +203,7 @@ function Menu() {
             <strong>Crispy’s Crazy Fries</strong>
             <img className="image" id="customize-burger" src="./img/7" alt="" />
             <p>
-              French Fries topped with Grilled Onions, Melted American Cheese
-              and Crispy Sauce (1000 Island).
+              French Fries topped with Grilled Onions, Melted American Cheese.
             </p>
             <span>&#x20B9;250</span>
             <Popup />

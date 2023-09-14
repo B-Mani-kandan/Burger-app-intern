@@ -3,21 +3,21 @@ const Productdetail = [
     id: 1,
     title: "The Original “OG” Crispy Single (1) Burger",
     content:
-      "Single (1) Certified Angus beef patty, caramelized onions melted American cheese, Crispy Sauce on a Toasted Brioche Bun",
+      "Single (1) Certified Angus beef patty, caramelized onions melted American cheese.",
     price: 180,
   },
   {
     id: 2,
     title: "The Original “OG” Crispy Single (2) Burger",
     content:
-      "Single (1) Certified Angus beef patty, caramelized onions melted American cheese, Crispy Sauce on a Toasted Brioche Bun",
+      "Single (1) Certified Angus beef patty, caramelized onions melted American cheese.",
     price: 350,
   },
   {
     id: 3,
     title: "The Original “OG” Crispy Single (3) Burger",
     content:
-      "Triple (3) Certified Angus beef patties, caramelized onions, melted American cheese, Crispy Sauce on a Toasted Brioche Bun.",
+      "Triple (3) Certified Angus beef patties, caramelized onions, melted American cheese.",
     price: 500,
   },
   {

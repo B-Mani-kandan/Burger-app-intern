@@ -171,7 +171,7 @@ header .nav-link span {
   }
   .card-01 {
     flex: auto;
-    height: -1%;
+    height: 0%;
     position: relative;
     left: 4%;
     font-size: smaller;
@@ -186,25 +186,32 @@ header .nav-link span {
   }
 
   #customize {
-    width: 20%;
-    /* height: auto; */
+    width: 11%;
+    height: auto;
+  }
+  #customize-burg {
+    width: 24%;
+    height: auto;
   }
   #customize-burger {
-    width: 22%;
+    width: 19%;
+    max-width: max-content;
     margin-right: 1%;
     bottom: 5%;
     position: absolute;
   }
   #customize-burgers {
     width: 20%;
-    /* height: auto; */
+    max-block-size: -webkit-fill-available;
+    height: auto;
   }
   #coffe {
-    width: 16%;
-    /* height: auto; */
+    width: 12%;
+    height: auto;
   }
   #oreo {
-    width: 20%;
+    width: 12%;
+    margin-top: auto;
   }
   #Fountaindrink {
     width: 16%;
@@ -212,5 +219,6 @@ header .nav-link span {
   }
   #kids {
     width: 24%;
+    height: auto;
   }
 }
