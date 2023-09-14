@@ -191,7 +191,7 @@ header .nav-link span {
   }
   #customize-burg {
     width: 24%;
-    height: auto;
+    /* height: auto; */
   }
   #customize-burger {
     width: 19%;
@@ -218,7 +218,7 @@ header .nav-link span {
     margin-right: 2%;
   }
   #kids {
-    width: 24%;
+    width: 20%;
     height: auto;
   }
 }
