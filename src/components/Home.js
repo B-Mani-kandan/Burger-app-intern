@@ -1,5 +1,10 @@
 import React from "react";
+// import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Home(props) {
+  const notify = () => toast("✅Successfully Booked your Table");
   return (
     <div>
       <header className="py">
@@ -227,14 +232,21 @@ function Home(props) {
           <form className="row">
             <div className="col-md-2"></div>
             <div className="col-md-4">
-              <input type="text" name="name" placeholder="Name" />
-              <input type="date" name="date" placeholder="Date" />
-              <input type="number" name="people" placeholder="People" />
+              <input type="text" placeholder="Name" />
+              <input type="date" placeholder="Date" />
+              <input type="number" placeholder="People" />
             </div>
             <div className="col-md-4">
-              <input type="email" name="email" placeholder="Email" />
-              <input type="time" name="time" placeholder="Time" />
-              <input type="submit" name="submit" value="FIND A TABLE" />
+              <input type="email" placeholder="Email" />
+              <input type="time" placeholder="Time" />
+              <input
+                type="submit"
+                className="booktable"
+                onClick={notify}
+                name="submit"
+                value="Book Table"
+              />
+              <ToastContainer />
             </div>
           </form>
         </div>

@@ -1,9 +1,13 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import styled from "styled-components";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 // import { Link } from "react-router-dom";
 
 const Contact = () => {
+  const notify = () => toast("🤗 Successfully Sent your Message");
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -29,19 +33,20 @@ const Contact = () => {
 
   return (
     <StyledContactForm>
-      <form ref={form} id="contactform" onSubmit={sendEmail}>
+      <form ref={form} className="contactform" onSubmit={sendEmail}>
         <p className="contactus">Contact Us</p>
         <label>Name</label>
-        <input type="text" name="user_name" />
+        <input type="text" required name="user_name" />
         <label>Last Name</label>
-        <input type="text" name="user_last" />
+        <input type="text" required name="user_last" />
         <label>Phone Number</label>
-        <input type="number" name="user_phone" />
+        <input type="number" required name="user_phone" />
         <label>Email</label>
-        <input type="email" name="user_email" />
+        <input type="email" required name="user_email" />
         <label>Message</label>
         <textarea name="message" />
-        <input type="submit" value="Send" />
+        <input type="submit" onClick={notify} value="Send" />
+        <ToastContainer />
         <a className="backhome" href={"/"}>
           Back to Home
         </a>
@@ -55,18 +60,27 @@ export default Contact;
 
 // Styles
 const StyledContactForm = styled.div`
+  height: 100%;
+  min-height: 100vh;
   width: 100%;
+  background: url(../img/banner-bg.png) center no-repeat;
   display: flex;
-  background: url(../img/banner-bg.png);
-  background-size: cover;
   justify-content: center;
+  align-items: center;
+  background-size: cover;
+
   form {
+    min-width: auto;
+    height: fit-content;
+    font-family: none;
+    width: fit-content;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    border-radius: 10px;
     display: flex;
-    position: relative;
     flex-direction: column;
-    margin-top: 4%;
-    width: 30%;
-    font-size: 16px;
+    gap: 10px;
 
     input {
       width: 100%;
@@ -77,7 +91,7 @@ const StyledContactForm = styled.div`
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
+        border: 2px solid red;
       }
     }
 
@@ -103,7 +117,7 @@ const StyledContactForm = styled.div`
       border: 1px solid rgb(220, 220, 220);
 
       &:focus {
-        border: 2px solid rgba(0, 206, 158, 1);
+        border: 2px solid red;
       }
     }
 

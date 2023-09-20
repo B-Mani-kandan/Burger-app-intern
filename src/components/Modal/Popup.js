@@ -152,7 +152,7 @@ export default function Popup() {
                 id="7"
                 className="secondinput"
                 name="checkbox"
-                value=""
+                value="No Cheese"
               />
               <label className="secondlabel" htmlFor="7">
                 No Cheese
@@ -165,7 +165,7 @@ export default function Popup() {
                 id="8"
                 className="secondinput"
                 name="checkbox"
-                value=""
+                value="Add Extra Tomato"
               />
               <label className="secondlabel" htmlFor="8">
                 Add Extra Tomato

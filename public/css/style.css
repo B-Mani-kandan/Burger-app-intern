@@ -313,7 +313,7 @@ header .content h2 {
   opacity: 1;
 }
 
-.reservation .col-md-4:last-child input:last-child {
+.reservation .booktable {
   background: #cc0000;
   border: 1px solid #f00;
   color: white;
@@ -324,7 +324,7 @@ header .content h2 {
   letter-spacing: 2px;
 }
 
-.reservation .col-md-4:last-child input:last-child:hover {
+.reservation .booktable {
   color: white;
   background-color: #cc0000;
 }
@@ -517,6 +517,11 @@ footer .container .d-flex ul li i:hover {
   }
   .py {
     padding: 4rem 0;
+  }
+}
+@media (max-width: 767px) {
+  .contactform {
+    max-width: auto;
   }
 }
 
